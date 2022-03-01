@@ -16,7 +16,7 @@ class DBSample(QMainWindow):
 
         res = self.connection.cursor().execute("SELECT * FROM coffees").fetchall()
         # Заполним размеры таблицы
-        self.tableWidget.setColumnCount(5)
+        self.tableWidget.setColumnCount(7)
         self.tableWidget.setRowCount(0)
         self.tableWidget.setWordWrap(True)
 
