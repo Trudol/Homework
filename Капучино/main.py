@@ -55,7 +55,6 @@ class Change(QMainWindow):
         d = cur.execute("SELECT CoffeeId from coffees").fetchall()[-1][0]
         for i in range(d + 2)[int(self.spinBox.text()) + 1:]:
             self.con.commit()
-            print(i)
             cur.execute("UPDATE coffees SET CoffeeId=%d WHERE CoffeeId=%d" % (i - 1, i))
         self.con.commit()
 
